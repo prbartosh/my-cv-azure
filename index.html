@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="button-container">
+        <button id="theme-toggle" data-lang-en="Change Theme" data-lang-pl="Zmień Motyw">Change Theme</button>
+        <button id="lang-toggle" data-lang-en="Zmień Język (PL)" data-lang-pl="Change Language (EN)">Zmień Język (PL)</button>
+    </div>
+
     <header class="fade-in">
         <h1>Bartosz Pajor</h1>
-        <p>Kontakt: <a href="mailto:pajorb4@gmail.com">pajorb4@gmail.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/bartosz-pajor-872952240/" target="_blank">Profil LinkedIn</a></p>
-        <button id="theme-toggle">Zmień motyw</button> {/* Dodano przycisk */}
-    </header>
+        </header>
 
     <section id="about" class="slide-in-left">
-        <h2>O mnie</h2>
-        {/* Usunięto */}
-        <p>Studiuję Informatykę na AGH i odkrywam swoją ścieżkę w IT. Interesuje mnie rola DevOps, łącząca automatyzację, zarządzanie infrastrukturą i optymalizację procesów. Posiadam doświadczenie w konfiguracji sieci oraz podstawową znajomość Linux, Git, Bash, C, C++ i Python.</p>
-        <p>Relaksują mnie sesje w saunie. Dla zabawy gram na instrumentach (pianino, bas, cajón) z przyjaciółmi.</p>
+        <h2 data-lang-en="About Me" data-lang-pl="O Mnie">About Me</h2>
+        <p data-lang-en="I am studying Computer Science in Engineering at AGH University of Science and Technology while exploring my path in IT. The DevOps role seems interesting to me as it combines automation, infrastructure management, and process optimization. Besides experience in network configuration, I have a basic understanding of Linux, Git, Bash, C, C++ and Python."
+           data-lang-pl="Studiuję Informatykę na AGH i odkrywam swoją ścieżkę w IT. Interesuje mnie rola DevOps, łącząca automatyzację, zarządzanie infrastrukturą i optymalizację procesów. Posiadam doświadczenie w konfiguracji sieci oraz podstawową znajomość Linux, Git, Bash, C, C++ i Python.">
+           I am studying Computer Science in Engineering at AGH University of Science and Technology while exploring my path in IT. The DevOps role seems interesting to me as it combines automation, infrastructure management, and process optimization. Besides experience in network configuration, I have a basic understanding of Linux, Git, Bash, C, C++ and Python. [cite: 1, 2, 3]
+        </p>
+        <p data-lang-en="I feel most relaxed during sauna sessions, where I can fully unwind. For fun, I enjoy playing music with friends as an instrumentalist, switching between piano, bass, and cajón."
+           data-lang-pl="Relaksują mnie sesje w saunie. Dla zabawy gram na instrumentach (pianino, bas, cajón) z przyjaciółmi.">
+           I feel most relaxed during sauna sessions, where I can fully unwind. [cite: 4] For fun, I enjoy playing music with friends as an instrumentalist, switching between piano, bass, and cajón. [cite: 5]
+        </p>
     </section>
 
     <section id="skills" class="slide-in-right">
-        <h2>Umiejętności</h2>
+        <h2 data-lang-en="Skills" data-lang-pl="Umiejętności">Skills</h2>
         <ul>
-             {/* Usunięto, jeśli były */}
             <li>Python</li>
             <li>C</li>
             <li>C++</li>
-            <li>Konfiguracja Sieci</li>
+            <li data-lang-en="Network Configuration" data-lang-pl="Konfiguracja Sieci">Network Configuration</li>
             <li>Linux</li>
             <li>Git</li>
             <li>SQL</li>
@@ -36,75 +43,87 @@
     </section>
 
     <section id="experience" class="slide-in-left">
-        <h2>Doświadczenie Zawodowe</h2>
+        <h2 data-lang-en="Work Experience" data-lang-pl="Doświadczenie Zawodowe">Work Experience</h2>
         <div class="job">
-             {/* Usunięto */}
-            <h3>Stażysta IT</h3>
-            <p><strong>AVSystem, GoodLood Technology team, Kraków</strong> (Październik 2022 - Listopad 2022)</p>
+            <h3 data-lang-en="IT Intern" data-lang-pl="Stażysta IT">IT Intern</h3>
+            <p><strong>AVSystem, GoodLood Technology team, Kraków</strong> <span data-lang-en="(October 2022 - November 2022)" data-lang-pl="(Październik 2022 - Listopad 2022)">(October 2022 - November 2022)</span></p>
             <ul>
-                <li>Rozwijałem skrypty Python do automatyzacji generowania konfiguracji routerów MikroTik.</li>
-                <li>Konfigurowałem reguły zapory sieciowej, adresację IP i inne ustawienia sieciowe.</li>
-                <li>Zdobyłem doświadczenie z MikroTik RouterOS.</li>
-                <li>Współpracowałem z zespołem przy optymalizacji i wdrażaniu rozwiązań sieciowych.</li>
+                <li data-lang-en="Developed Python scripts to automate the generation of MikroTik router configurations based on input parameters."
+                    data-lang-pl="Rozwijałem skrypty Python do automatyzacji generowania konfiguracji routerów MikroTik.">Developed Python scripts to automate the generation of MikroTik router configurations based on input parameters.</li>
+                <li data-lang-en="Configured firewall rules, IP addressing, and other network settings."
+                    data-lang-pl="Konfigurowałem reguły zapory sieciowej, adresację IP i inne ustawienia sieciowe.">Configured firewall rules, IP addressing, and other network settings.</li>
+                <li data-lang-en="Gained experience with MikroTik RouterOS and its applications in network automation."
+                    data-lang-pl="Zdobyłem doświadczenie z MikroTik RouterOS.">Gained experience with MikroTik RouterOS and its applications in network automation.</li>
+                <li data-lang-en="Collaborated with the team to optimize and implement network solutions."
+                    data-lang-pl="Współpracowałem z zespołem przy optymalizacji i wdrażaniu rozwiązań sieciowych.">Collaborated with the team to optimize and implement network solutions.</li>
             </ul>
         </div>
         <div class="job">
-             {/* Usunięto */}
-            <h3>Stażysta Technik Sieci</h3>
-            <p><strong>Polmex-seris, Kraków</strong> (Kwiecień 2022 - Maj 2022)</p>
+            <h3 data-lang-en="Network Technician Intern" data-lang-pl="Stażysta Technik Sieci">Network Technician Intern</h3>
+            <p><strong>Polmex-seris, Kraków</strong> <span data-lang-en="(April 2022 - May 2022)" data-lang-pl="(Kwiecień 2022 - Maj 2022)">(April 2022 - May 2022)</span></p>
             <ul>
-                <li>Instalowałem usługi internetowe (radiowe, miedziane, światłowodowe).</li>
-                <li>Prace manualne (wiercenie, kopanie, spawanie światłowodów, terminacja kabli).</li>
-                <li>Konfigurowałem routery, modemy, sprzęt sieci bezprzewodowej.</li>
-                <li>Zarządzałem szafami serwerowymi i infrastrukturą sieciową.</li>
+                <li data-lang-en="Installed internet services in Kraków across radio, copper, and fiber-optic networks."
+                    data-lang-pl="Instalowałem usługi internetowe (radiowe, miedziane, światłowodowe).">Installed internet services in Kraków across radio, copper, and fiber-optic networks.</li>
+                <li data-lang-en="Hands-on work including drilling, digging, fiber splicing, and cable termination."
+                    data-lang-pl="Prace manualne (wiercenie, kopanie, spawanie światłowodów, terminacja kabli).">Hands-on work including drilling, digging, fiber splicing, and cable termination.</li>
+                <li data-lang-en="Configured routers, modems, and wireless network equipment."
+                    data-lang-pl="Konfigurowałem routery, modemy, sprzęt sieci bezprzewodowej.">Configured routers, modems, and wireless network equipment.</li>
+                <li data-lang-en="Managed and organized server racks and network infrastructure."
+                    data-lang-pl="Zarządzałem szafami serwerowymi i infrastrukturą sieciową.">Managed and organized server racks and network infrastructure.</li>
             </ul>
         </div>
     </section>
 
      <section id="projects" class="slide-in-right">
-        <h2>Projekty</h2>
+        <h2 data-lang-en="Projects" data-lang-pl="Projekty">Projects</h2>
          <div class="project">
-              {/* Usunięto */}
-             <h3>Pandemonium (Gra - "Hacking Simulator")</h3>
-             <p><strong>Grudzień 2024</strong></p>
-             <p>Projekt zespołowy (4 osoby). Rozwijałem system zarządzania rozgrywką i mini-grami w C++, skupiając się na czystym kodzie, OOP i skalowalnej architekturze.</p>
+             <h3 data-lang-en="Pandemonium (Game - &quot;Hacking Simulator&quot;)" data-lang-pl="Pandemonium (Gra - &quot;Hacking Simulator&quot;)">Pandemonium (Game - "Hacking Simulator")</h3>
+             <p><strong data-lang-en="December 2024" data-lang-pl="Grudzień 2024">December 2024</strong></p>
+             <p data-lang-en="Team project (4 people). Developed a gameplay manager and mini-game system in C++, focusing on clean code, OOP, and scalable architecture."
+                data-lang-pl="Projekt zespołowy (4 osoby). Rozwijałem system zarządzania rozgrywką i mini-grami w C++, skupiając się na czystym kodzie, OOP i skalowalnej architekturze.">
+                Team project (4 people). Developed a gameplay manager and mini-game system in C++, focusing on clean code, OOP, and scalable architecture. [cite: 7]
+             </p>
          </div>
          <div class="project">
-             {/* Usunięto */}
-            <h3>Hackaton (Aplikacja Mobilna Flutter)</h3>
-            <p><strong>Wrzesień 2024</strong></p>
-            <p>Projekt zespołowy (3 osoby). Odpowiedzialny za implementację funkcji timera Pomodoro. Wzmocniło to umiejętności kontroli wersji i pracy zespołowej.</p>
+            <h3 data-lang-en="Hackathon (Flutter Mobile App)" data-lang-pl="Hackaton (Aplikacja Mobilna Flutter)">Hackathon (Flutter Mobile App)</h3>
+            <p><strong data-lang-en="September 2024" data-lang-pl="Wrzesień 2024">September 2024</strong></p>
+            <p data-lang-en="Team project (3 people). Responsible for implementing a Pomodoro timer feature. Reinforced version control and teamwork skills."
+               data-lang-pl="Projekt zespołowy (3 osoby). Odpowiedzialny za implementację funkcji timera Pomodoro. Wzmocniło to umiejętności kontroli wersji i pracy zespołowej.">
+               Team project (3 people). Responsible for implementing a Pomodoro timer feature. Reinforced version control and teamwork skills. [cite: 7]
+            </p>
         </div>
     </section>
 
     <section id="education" class="slide-in-left">
-         {/* Usunięto */}
-        <h2>Edukacja</h2>
-        <p><strong>Informatyka (Inżynier)</strong> - AGH Akademia Górniczo-Hutnicza w Krakowie (Październik 2024 - Obecnie)</p>
-        <p><strong>Technik Teleinformatyk</strong> - Technikum Łączności w Krakowie (Wrzesień 2019 - Kwiecień 2024)</p>
+        <h2 data-lang-en="Education" data-lang-pl="Edukacja">Education</h2>
+        <p><strong data-lang-en="Computer Science in Engineering" data-lang-pl="Informatyka (Inżynier)">Computer Science in Engineering</strong> - <span data-lang-en="AGH University of Science and Technology, Kraków" data-lang-pl="AGH Akademia Górniczo-Hutnicza w Krakowie">AGH University of Science and Technology, Kraków</span> (<span data-lang-en="October 2024 - Present" data-lang-pl="Październik 2024 - Obecnie">October 2024 - Present</span>)</p>
+        <p><strong data-lang-en="ICT Technician" data-lang-pl="Technik Teleinformatyk">ICT Technician</strong> - <span data-lang-en="Technikum Łączności, Kraków" data-lang-pl="Technikum Łączności w Krakowie">Technikum Łączności, Kraków</span> (<span data-lang-en="September 2019 - April 2024" data-lang-pl="Wrzesień 2019 - Kwiecień 2024">September 2019 - April 2024</span>)</p>
     </section>
 
     <section id="languages" class="slide-in-right">
-         {/* Usunięto */}
-        <h2>Języki</h2>
+        <h2 data-lang-en="Languages" data-lang-pl="Języki">Languages</h2>
         <ul>
-            <li>Polski (Natywny)</li>
-            <li>Angielski</li>
+            <li data-lang-en="Polish (Native)" data-lang-pl="Polski (Natywny)">Polish (Native)</li>
+            <li data-lang-en="English" data-lang-pl="Angielski">English</li>
         </ul>
     </section>
 
     <section id="hobbies" class="fade-in">
-         {/* Usunięto */}
-        <h2>Hobby</h2>
+        <h2 data-lang-en="Hobbies" data-lang-pl="Hobby">Hobbies</h2>
         <ul>
-            <li>Informatyka</li>
-            <li>Gra na instrumentach</li>
-            <li>Kawa</li>
-            <li>Sauna</li>
+            <li data-lang-en="Computer Science" data-lang-pl="Informatyka">Computer Science</li>
+            <li data-lang-en="Playing Instruments" data-lang-pl="Gra na Instrumentach">Playing Instruments</li>
+            <li data-lang-en="Coffee" data-lang-pl="Kawa">Coffee</li>
+            <li data-lang-en="Sauna" data-lang-pl="Sauna">Sauna</li>
         </ul>
     </section>
 
     <footer>
+        <div class="footer-contact">
+            <p data-lang-en="Contact:" data-lang-pl="Kontakt:">Contact:</p>
+            <p>Email: <a href="mailto:pajorb4@gmail.com">pajorb4@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/bartosz-pajor-872952240/" target="_blank">Bartosz Pajor</a></p>
+        </div>
         <p>&copy; 2024 Bartosz Pajor</p>
     </footer>
 

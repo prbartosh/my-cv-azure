@@ -1,4 +1,4 @@
-/* Definicje zmiennych kolorów */
+/* Definicje zmiennych kolorów (bez zmian) */
 :root {
     --bg-color: #f4f4f4;
     --text-color: #333;
@@ -6,7 +6,7 @@
     --header-bg-color: #333;
     --header-text-color: #fff;
     --link-color: #a0c4ff;
-    --link-hover-color: #80a4df; /* Dodano dla spójności */
+    --link-hover-color: #80a4df;
     --border-color: #a0c4ff;
     --heading-color: #333;
     --subheading-color: #555;
@@ -21,7 +21,7 @@
     --button-hover-bg: #777;
 }
 
-/* Style dla trybu ciemnego */
+/* Style dla trybu ciemnego (bez zmian) */
 body.dark-mode {
     --bg-color: #222;
     --text-color: #eee;
@@ -35,7 +35,7 @@ body.dark-mode {
     --subheading-color: #ccc;
     --list-item-bg: #444;
     --list-item-hover-bg: #555;
-    --skill-bg: #507bb0; /* Ciemniejszy niebieski dla kontrastu */
+    --skill-bg: #507bb0;
     --skill-hover-bg: #406aa0;
     --shadow-color: rgba(255,255,255,0.1);
     --dashed-border-color: #555;
@@ -44,7 +44,7 @@ body.dark-mode {
     --button-hover-bg: #ccc;
 }
 
-/* --- Podstawowe style używające zmiennych --- */
+/* --- Podstawowe style --- */
 body {
     font-family: sans-serif;
     line-height: 1.6;
@@ -52,44 +52,60 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    overflow-x: hidden; /* Prevent horizontal scrollbar caused by animations */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Płynne przejście motywu */
-}
-
-header, footer {
-    background-color: var(--header-bg-color);
-    color: var(--header-text-color);
-    text-align: center;
-    padding: 1em 0;
+    overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative; /* Needed for absolute positioning of button container */
+    padding-top: 50px; /* Add padding to prevent content overlap with fixed buttons */
 }
 
-header a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* --- Kontener na przyciski w prawym górnym rogu --- */
+.button-container {
+    position: fixed; /* Fixed positioning */
+    top: 15px;
+    right: 15px;
+    z-index: 1000; /* Ensure buttons are above other content */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-end; /* Align buttons to the right */
 }
 
-header a:hover {
-    text-decoration: underline;
-    color: var(--link-hover-color);
-}
-
-/* Przycisk zmiany motywu */
-#theme-toggle {
+/* Styl przycisków w kontenerze */
+.button-container button {
     background-color: var(--button-bg);
     color: var(--button-text);
     border: none;
-    padding: 8px 15px;
-    margin-top: 10px;
+    padding: 8px 12px; /* Slightly smaller padding */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em; /* Slightly smaller font */
     transition: background-color 0.3s ease;
+    margin-bottom: 5px; /* Space between buttons */
+    min-width: 130px; /* Ensure buttons have similar width */
+    text-align: center;
 }
 
-#theme-toggle:hover {
+.button-container button:last-child {
+    margin-bottom: 0;
+}
+
+.button-container button:hover {
     background-color: var(--button-hover-bg);
+}
+
+
+/* Nagłówek - usunięto przycisk, dostosowano padding */
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 0.5em 0; /* Reduced padding slightly */
+    margin-bottom: 20px; /* Add margin below header */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Adjust size as needed */
 }
 
 
@@ -99,7 +115,7 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
-    opacity: 0; /* Start hidden for animation */
+    opacity: 0;
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, background-color 0.3s ease;
 }
 
@@ -107,6 +123,7 @@ h2 {
     color: var(--heading-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 5px;
+    margin-top: 0; /* Remove default top margin */
     margin-bottom: 15px;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
@@ -142,7 +159,7 @@ ul li:hover {
 
 #skills li {
     background-color: var(--skill-bg);
-    color: var(--text-color); /* Używamy głównego koloru tekstu lub specyficznego dla skill */
+    color: var(--text-color);
     padding: 5px 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -161,13 +178,37 @@ ul li:hover {
     border-bottom: none;
 }
 
+/* --- Stopka --- */
 footer {
+    background-color: var(--header-bg-color); /* Use header background for consistency */
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1em 0;
     margin-top: 30px;
+     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* --- Animations (bez zmian) --- */
+.footer-contact {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
 
-/* Initial states for animations */
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: var(--link-color); /* Use link color from theme */
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+     color: var(--link-hover-color);
+}
+
+
+/* --- Animacje (bez zmian) --- */
 .fade-in {
     opacity: 0;
     animation: fadeInAnimation 1s ease-out forwards;
@@ -175,51 +216,17 @@ footer {
 
 .slide-in-left {
     opacity: 0;
-    transform: translateX(-100px); /* Start off-screen left */
-    /* Animacja jest teraz stosowana przez JS */
+    transform: translateX(-100px);
 }
 
 .slide-in-right {
     opacity: 0;
-    transform: translateX(100px); /* Start off-screen right */
-     /* Animacja jest teraz stosowana przez JS */
+    transform: translateX(100px);
 }
 
-/* Keyframe Animations */
-@keyframes fadeInAnimation {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+@keyframes fadeInAnimation { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInLeftAnimation { from { opacity: 0; transform: translateX(-100px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInRightAnimation { from { opacity: 0; transform: translateX(100px); } to { opacity: 1; transform: translateX(0); } }
 
-@keyframes slideInLeftAnimation {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRightAnimation {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Stagger animations control */
-section {
-    opacity: 0; /* Keep sections initially hidden */
-     transform: translateX(0); /* Reset transform */
-}
-
-section.visible {
-    opacity: 1;
-    /* Animacja dodawana przez JS */
-}
+section { opacity: 0; transform: translateX(0); }
+section.visible { opacity: 1; }

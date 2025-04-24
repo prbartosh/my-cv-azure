@@ -12,13 +12,15 @@
         <button id="lang-toggle" data-lang-en="Zmień Język (PL)" data-lang-pl="Change Language (EN)">Zmień Język (PL)</button>
     </div>
 
+    <div id="notification" class="notification">Email copied to clipboard!</div>
+
     <header class="fade-in">
         <div class="profile-image">
             <img src="assets/images/Pajor_Bartosz_photo.jpg" alt="Bartosz Pajor">
         </div>
         <h1>Bartosz Pajor</h1>
         <div class="header-contact">
-            <a href="mailto:pajorb4@gmail.com"><span data-lang-en="pajorb4@gmail.com" data-lang-pl="pajorb4@gmail.com"></span></a>
+            <span class="copy-email" data-email="pajorb4@gmail.com"><span data-lang-en="pajorb4@gmail.com" data-lang-pl="pajorb4@gmail.com">pajorb4@gmail.com</span></span>
             <span class="separator">|</span>
             <a href="https://www.linkedin.com/in/bartosz-pajor-872952240/" target="_blank">LinkedIn</a>
         </div>
@@ -39,14 +41,15 @@
     <section id="skills" class="slide-in-right">
         <h2 data-lang-en="Skills" data-lang-pl="Umiejętności">Skills</h2>
         <ul>
-            <li>Python</li>
-            <li>C</li>
-            <li>C++</li>
-            <li data-lang-en="Network Configuration" data-lang-pl="Konfiguracja Sieci">Network Configuration</li>
-            <li>Linux</li>
-            <li>Git</li>
-            <li>SQL</li>
-            <li>Bash</li>
+            <li><img src="assets/logos/python_logo_v2.png" alt="Python" class="skill-logo" title="Python"></li>
+            <li><img src="assets/logos/C_logo.png" alt="C" class="skill-logo" title="C"></li>
+            <li><img src="assets/logos/Cpp_logo.png" alt="C++" class="skill-logo" title="C++"></li>
+            <li><img src="assets/logos/java_logo.png" alt="Java" class="skill-logo" title="Java"></li>
+            <li><img src="assets/logos/network_configuration_logo.png" alt="Network Configuration" class="skill-logo" title="Network Configuration"></li>
+            <li><img src="assets/logos/linux_logo.png" alt="Linux" class="skill-logo" title="Linux"></li>
+            <li><img src="assets/logos/git_logo.png" alt="Git" class="skill-logo" title="Git"></li>
+            <li><img src="assets/logos/sql_logo.png" alt="SQL" class="skill-logo" title="SQL"></li>
+            <li><img src="assets/logos/bash_logo.png" alt="Bash" class="skill-logo" title="Bash"></li>
         </ul>
     </section>
 
@@ -129,7 +132,7 @@
     <footer>
         <div class="footer-contact">
             <p data-lang-en="Contact:" data-lang-pl="Kontakt:">Contact:</p>
-            <p>Email: <a href="mailto:pajorb4@gmail.com">pajorb4@gmail.com</a></p>
+            <p>Email: <span class="copy-email" data-email="pajorb4@gmail.com">pajorb4@gmail.com</span></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/bartosz-pajor-872952240/" target="_blank">Bartosz Pajor</a></p>
             <p>GitHub: <a href="https://github.com/prbartosh" target="_blank">prbartosh</a></p>
             <p>Number: +48 530 050 848</p>

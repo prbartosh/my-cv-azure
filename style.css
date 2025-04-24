@@ -190,17 +190,31 @@ ul li:hover {
 #skills ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
 }
 
 #skills li {
-    background-color: var(--skill-bg);
-    color: var(--text-color);
-    padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--list-item-bg);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
 }
+
 #skills li:hover {
-     background-color: var(--skill-hover-bg);
+    transform: scale(1.1);
+    background-color: var(--list-item-hover-bg);
+}
+
+.skill-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .job, .project {
@@ -265,3 +279,36 @@ footer {
 
 section { opacity: 0; transform: translateX(0); }
 section.visible { opacity: 1; }
+
+/* --- Notification styles --- */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- Email copy styles --- */
+.copy-email {
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.copy-email:hover {
+    opacity: 0.8;
+}

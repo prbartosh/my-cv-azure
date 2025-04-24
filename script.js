@@ -62,6 +62,29 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage(newLang);
     });
 
+    // --- Email Copy Functionality ---
+    const emailElements = document.querySelectorAll('.copy-email');
+    const notification = document.getElementById('notification');
+
+    emailElements.forEach(emailElement => {
+        emailElement.addEventListener('click', async () => {
+            const email = emailElement.getAttribute('data-email');
+            try {
+                await navigator.clipboard.writeText(email);
+                
+                // Show notification
+                notification.classList.add('show');
+                
+                // Hide notification after 2 seconds
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy email:', err);
+            }
+        });
+    });
+
     // --- Initial Load ---
     // 1. Set initial language (check localStorage or default to 'en')
     const savedLang = localStorage.getItem('language');

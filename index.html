@@ -1,90 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            font-family: 'Times New Roman', serif;
-            color: #2c3e50;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 20px;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
-        }
-        h3 {
-            font-size: 1.4em;
-            margin-top: 15px;
-        }
-        p {
-            margin: 10px 0;
-        }
-        ul {
-            list-style-type: square;
-            margin: 10px 0 10px 20px;
-        }
-        .contact-info {
-            margin-bottom: 20px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-    </style>
+    <title>Bartosz Pajor - CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Your Name</h1>
-        <div class="contact-info">
-            <p>Email: your.email@example.com</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Address: 123 Oxford Street, City, Country</p>
+    <header class="fade-in">
+        <h1>Bartosz Pajor</h1>
+        <p>Kontakt: <a href="mailto:pajorb4@gmail.com">pajorb4@gmail.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/bartosz-pajor-872952240/" target="_blank">Profil LinkedIn</a></p> [cite: 1]
+    </header>
+
+    <section id="about" class="slide-in-left">
+        <h2>O mnie</h2>
+        <p>Studiuję Informatykę na AGH i odkrywam swoją ścieżkę w IT[cite: 1]. Interesuje mnie rola DevOps, łącząca automatyzację, zarządzanie infrastrukturą i optymalizację procesów[cite: 2]. Posiadam doświadczenie w konfiguracji sieci oraz podstawową znajomość Linux, Git, Bash, C, C++ i Python[cite: 3].</p>
+        <p>Relaksują mnie sesje w saunie[cite: 4]. Dla zabawy gram na instrumentach (pianino, bas, cajón) z przyjaciółmi[cite: 5].</p>
+    </section>
+
+    <section id="skills" class="slide-in-right">
+        <h2>Umiejętności</h2>
+        <ul>
+            <li>Python</li> [cite: 3]
+            <li>C</li> [cite: 3]
+            <li>C++</li> [cite: 3]
+            <li>Konfiguracja Sieci</li> [cite: 3]
+            <li>Linux</li> [cite: 3]
+            <li>Git</li> [cite: 3]
+            <li>SQL</li> [cite: 6]
+            <li>Bash</li> [cite: 3]
+        </ul>
+    </section>
+
+    <section id="experience" class="slide-in-left">
+        <h2>Doświadczenie Zawodowe</h2>
+        <div class="job">
+            <h3>Stażysta IT</h3>
+            <p><strong>AVSystem, GoodLood Technology team, Kraków</strong> (Październik 2022 - Listopad 2022)</p> [cite: 6]
+            <ul>
+                <li>Rozwijałem skrypty Python do automatyzacji generowania konfiguracji routerów MikroTik.</li> [cite: 6]
+                <li>Konfigurowałem reguły zapory sieciowej, adresację IP i inne ustawienia sieciowe.</li> [cite: 6]
+                <li>Zdobyłem doświadczenie z MikroTik RouterOS.</li> [cite: 6]
+                <li>Współpracowałem z zespołem przy optymalizacji i wdrażaniu rozwiązań sieciowych.</li> [cite: 6]
+            </ul>
         </div>
-        <h2>Profile</h2>
-        <p>A brief summary about yourself, your skills, and your career goals.</p>
-        <h2>Education</h2>
-        <h3>Degree Name</h3>
-        <p>University Name, Year of Graduation</p>
+        <div class="job">
+            <h3>Stażysta Technik Sieci</h3>
+            <p><strong>Polmex-seris, Kraków</strong> (Kwiecień 2022 - Maj 2022)</p> [cite: 6]
+            <ul>
+                <li>Instalowałem usługi internetowe (radiowe, miedziane, światłowodowe).</li> [cite: 6]
+                <li>Prace manualne (wiercenie, kopanie, spawanie światłowodów, terminacja kabli).</li> [cite: 6]
+                <li>Konfigurowałem routery, modemy, sprzęt sieci bezprzewodowej.</li> [cite: 6]
+                <li>Zarządzałem szafami serwerowymi i infrastrukturą sieciową.</li> [cite: 6]
+            </ul>
+        </div>
+    </section>
+
+     <section id="projects" class="slide-in-right">
+        <h2>Projekty</h2>
+         <div class="project">
+             <h3>Pandemonium (Gra - "Hacking Simulator")</h3>
+             <p><strong>Grudzień 2024</strong></p> [cite: 7]
+             <p>Projekt zespołowy (4 osoby). Rozwijałem system zarządzania rozgrywką i mini-grami w C++, skupiając się na czystym kodzie, OOP i skalowalnej architekturze.</p> [cite: 7]
+         </div>
+         <div class="project">
+            <h3>Hackaton (Aplikacja Mobilna Flutter)</h3>
+            <p><strong>Wrzesień 2024</strong></p> [cite: 7]
+            <p>Projekt zespołowy (3 osoby). Odpowiedzialny za implementację funkcji timera Pomodoro. Wzmocniło to umiejętności kontroli wersji i pracy zespołowej.</p> [cite: 7]
+        </div>
+    </section>
+
+    <section id="education" class="slide-in-left">
+        <h2>Edukacja</h2>
+        <p><strong>Informatyka (Inżynier)</strong> - AGH Akademia Górniczo-Hutnicza w Krakowie (Październik 2024 - Obecnie)</p> [cite: 9]
+        <p><strong>Technik Teleinformatyk</strong> - Technikum Łączności w Krakowie (Wrzesień 2019 - Kwiecień 2024)</p> [cite: 9]
+    </section>
+
+    <section id="languages" class="slide-in-right">
+        <h2>Języki</h2>
         <ul>
-            <li>Relevant coursework or achievements</li>
-            <li>Another relevant detail</li>
+            <li>Polski (Natywny)</li> [cite: 6]
+            <li>Angielski</li> [cite: 6]
         </ul>
-        <h2>Experience</h2>
-        <h3>Job Title</h3>
-        <p>Company Name, Start Date - End Date</p>
+    </section>
+
+    <section id="hobbies" class="fade-in">
+        <h2>Hobby</h2>
         <ul>
-            <li>Key responsibility or achievement</li>
-            <li>Another key responsibility or achievement</li>
+            <li>Informatyka</li> [cite: 6]
+            <li>Gra na instrumentach</li> [cite: 5, 6]
+            <li>Kawa</li> [cite: 6]
+            <li>Sauna</li> [cite: 4, 6]
         </ul>
-        <h2>Skills</h2>
-        <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-        </ul>
-        <h2>Interests</h2>
-        <p>List your hobbies or interests here.</p>
-    </div>
-    </body>
-    </html>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bartosz Pajor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

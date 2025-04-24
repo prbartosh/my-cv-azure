@@ -1,0 +1,159 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrollbar caused by animations */
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header a {
+    color: #a0c4ff; /* Lighter blue for links */
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0; /* Start hidden for animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #a0c4ff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #eef;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #d0d0f0;
+}
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills li {
+    background-color: #a0c4ff; /* Blue background for skills */
+    color: #333;
+    padding: 5px 10px;
+}
+#skills li:hover {
+     background-color: #80a4df;
+}
+
+.job, .project {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.job:last-child, .project:last-child {
+    border-bottom: none;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* --- Animations --- */
+
+/* Initial states for animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-out forwards;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px); /* Start off-screen left */
+    animation: slideInLeftAnimation 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px); /* Start off-screen right */
+    animation: slideInRightAnimation 0.8s ease-out forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeftAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRightAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Stagger animations - requires JavaScript */
+section {
+    opacity: 0; /* Keep sections initially hidden */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ensure transform is reset */
+}
+
+/* Add delay directly in CSS if JS is not preferred for this */
+/* Example:
+#about { animation-delay: 0.2s; }
+#skills { animation-delay: 0.4s; }
+#experience { animation-delay: 0.6s; }
+ etc.
+*/

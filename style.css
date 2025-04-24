@@ -92,6 +92,23 @@ body {
     background-color: var(--button-hover-bg);
 }
 
+/* Profile image styles */
+.profile-image {
+    width: 200px; /* Increased from 150px */
+    height: 200px; /* Increased from 150px */
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast; /* Improve image sharpness */
+    image-rendering: crisp-edges;
+}
 
 /* Nagłówek - usunięto przycisk, dostosowano padding */
 header {
@@ -108,6 +125,25 @@ header h1 {
     font-size: 2em; /* Adjust size as needed */
 }
 
+.header-contact {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.header-contact a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-contact a:hover {
+    color: var(--link-color);
+}
+
+.header-contact .separator {
+    margin: 0 10px;
+    color: var(--header-text-color);
+}
 
 section {
     background-color: var(--card-bg-color);
@@ -206,7 +242,6 @@ footer {
     text-decoration: underline;
      color: var(--link-hover-color);
 }
-
 
 /* --- Animacje (bez zmian) --- */
 .fade-in {

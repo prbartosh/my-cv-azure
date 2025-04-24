@@ -1,49 +1,120 @@
+/* Definicje zmiennych kolorów */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg-color: #fff;
+    --header-bg-color: #333;
+    --header-text-color: #fff;
+    --link-color: #a0c4ff;
+    --link-hover-color: #80a4df; /* Dodano dla spójności */
+    --border-color: #a0c4ff;
+    --heading-color: #333;
+    --subheading-color: #555;
+    --list-item-bg: #eef;
+    --list-item-hover-bg: #d0d0f0;
+    --skill-bg: #a0c4ff;
+    --skill-hover-bg: #80a4df;
+    --shadow-color: rgba(0,0,0,0.1);
+    --dashed-border-color: #ccc;
+    --button-bg: #555;
+    --button-text: #fff;
+    --button-hover-bg: #777;
+}
+
+/* Style dla trybu ciemnego */
+body.dark-mode {
+    --bg-color: #222;
+    --text-color: #eee;
+    --card-bg-color: #333;
+    --header-bg-color: #111;
+    --header-text-color: #eee;
+    --link-color: #bbddff;
+    --link-hover-color: #99ccff;
+    --border-color: #bbddff;
+    --heading-color: #eee;
+    --subheading-color: #ccc;
+    --list-item-bg: #444;
+    --list-item-hover-bg: #555;
+    --skill-bg: #507bb0; /* Ciemniejszy niebieski dla kontrastu */
+    --skill-hover-bg: #406aa0;
+    --shadow-color: rgba(255,255,255,0.1);
+    --dashed-border-color: #555;
+    --button-bg: #aaa;
+    --button-text: #111;
+    --button-hover-bg: #ccc;
+}
+
+/* --- Podstawowe style używające zmiennych --- */
 body {
     font-family: sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     overflow-x: hidden; /* Prevent horizontal scrollbar caused by animations */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Płynne przejście motywu */
 }
 
 header, footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     text-align: center;
     padding: 1em 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header a {
-    color: #a0c4ff; /* Lighter blue for links */
+    color: var(--link-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 header a:hover {
     text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
+/* Przycisk zmiany motywu */
+#theme-toggle {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--button-hover-bg);
+}
+
+
 section {
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     margin: 20px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--shadow-color);
     opacity: 0; /* Start hidden for animation */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, background-color 0.3s ease;
 }
 
 h2 {
-    color: #333;
-    border-bottom: 2px solid #a0c4ff;
+    color: var(--heading-color);
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 5px;
     margin-bottom: 15px;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 h3 {
-    color: #555;
+    color: var(--subheading-color);
     margin-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
 ul {
@@ -52,7 +123,7 @@ ul {
 }
 
 ul li {
-    background-color: #eef;
+    background-color: var(--list-item-bg);
     margin-bottom: 5px;
     padding: 8px;
     border-radius: 4px;
@@ -60,7 +131,7 @@ ul li {
 }
 
 ul li:hover {
-    background-color: #d0d0f0;
+    background-color: var(--list-item-hover-bg);
 }
 
 #skills ul {
@@ -70,18 +141,20 @@ ul li:hover {
 }
 
 #skills li {
-    background-color: #a0c4ff; /* Blue background for skills */
-    color: #333;
+    background-color: var(--skill-bg);
+    color: var(--text-color); /* Używamy głównego koloru tekstu lub specyficznego dla skill */
     padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 #skills li:hover {
-     background-color: #80a4df;
+     background-color: var(--skill-hover-bg);
 }
 
 .job, .project {
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed var(--dashed-border-color);
+    transition: border-color 0.3s ease;
 }
 
 .job:last-child, .project:last-child {
@@ -92,7 +165,7 @@ footer {
     margin-top: 30px;
 }
 
-/* --- Animations --- */
+/* --- Animations (bez zmian) --- */
 
 /* Initial states for animations */
 .fade-in {
@@ -103,13 +176,13 @@ footer {
 .slide-in-left {
     opacity: 0;
     transform: translateX(-100px); /* Start off-screen left */
-    animation: slideInLeftAnimation 0.8s ease-out forwards;
+    /* Animacja jest teraz stosowana przez JS */
 }
 
 .slide-in-right {
     opacity: 0;
     transform: translateX(100px); /* Start off-screen right */
-    animation: slideInRightAnimation 0.8s ease-out forwards;
+     /* Animacja jest teraz stosowana przez JS */
 }
 
 /* Keyframe Animations */
@@ -140,20 +213,13 @@ footer {
     }
 }
 
-/* Stagger animations - requires JavaScript */
+/* Stagger animations control */
 section {
     opacity: 0; /* Keep sections initially hidden */
+     transform: translateX(0); /* Reset transform */
 }
 
 section.visible {
     opacity: 1;
-    transform: translateX(0); /* Ensure transform is reset */
+    /* Animacja dodawana przez JS */
 }
-
-/* Add delay directly in CSS if JS is not preferred for this */
-/* Example:
-#about { animation-delay: 0.2s; }
-#skills { animation-delay: 0.4s; }
-#experience { animation-delay: 0.6s; }
- etc.
-*/

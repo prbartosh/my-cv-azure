@@ -67,6 +67,7 @@ body {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     align-items: flex-end; /* Align buttons to the right */
+    opacity: 0.8;
 }
 
 /* Styl przycisków w kontenerze */
@@ -74,7 +75,7 @@ body {
     background-color: var(--button-bg);
     color: var(--button-text);
     border: none;
-    padding: 8px 12px; /* Slightly smaller padding */
+    padding: 6px 9px; /* Slightly smaller padding */
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.85em; /* Slightly smaller font */

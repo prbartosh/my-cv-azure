@@ -5,8 +5,8 @@
     --card-bg-color: #fff;
     --header-bg-color: #333;
     --header-text-color: #fff;
-    --link-color: #a0c4ff;
-    --link-hover-color: #80a4df;
+    --link-color: #3af57f;
+    --link-hover-color: #29954d;
     --border-color: #a0c4ff;
     --heading-color: #333;
     --subheading-color: #555;
@@ -28,8 +28,8 @@ body.dark-mode {
     --card-bg-color: #333;
     --header-bg-color: #111;
     --header-text-color: #eee;
-    --link-color: #bbddff;
-    --link-hover-color: #99ccff;
+    --link-color: #3af57f;
+    --link-hover-color: #29954d;
     --border-color: #bbddff;
     --heading-color: #eee;
     --subheading-color: #ccc;
@@ -110,6 +110,23 @@ body {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
 }
+
+/* GitHub-like link, dopasowany do Twoich zmiennych */
+.github-link {
+    color: var(--link-color);                  /* kolor linku */
+    text-decoration: none;                     /* bez domyślnego podkreślenia */
+    border-bottom: 1px solid var(--link-color); /* subtelna linia spodem */
+    font-weight: 500;                          /* lekko pogrubione, jak na GitHubie */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out,
+                border-color 0.2s ease-in-out;  /* płynne przejście kolorów */
+}
+
+.github-link:hover {
+    color: var(--link-hover-color);            /* kolor po najechaniu */
+    border-color: var(--link-hover-color);     /* linia też zmienia kolor */
+}
+
 
 /* Nagłówek - usunięto przycisk, dostosowano padding */
 header {
